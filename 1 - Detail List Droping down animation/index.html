@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Animation</title>
+	<style>
+		body{
+			margin:auto;
+			width: 400px;
+		}
+		dt{
+			background: #e3e3e3;
+			border:1px solid black;
+			padding: 10px 120px 10px 0px;
+			text-align: center;			
+			border-radius: 5px 5px 5px 5px;
+		}
+		dd{
+			padding: 10px 120px 10px 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<dl>
+	<dt>What's my name?</dt>
+	<dd>Neranjan</dd>
+	<dt>What's my name?</dt>
+	<dd>Dayan</dd>
+	<dt>What's my name?</dt>
+	<dd>Ewerdney</dd>
+	<dt>What's my name?</dt>
+	<dd>Mendis</dd>
+</dl>
+
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script >
+(function(){
+	var dd = $('dd');
+	dd.hide();
+	$('dt').on('mouseenter',function(){
+		$(this).
+			next().
+				slideDown(300).
+				siblings('dd').
+				slideUp(300);
+	});
+})();
+	
+
+
+</script>	
+
+</body>
+</html>
